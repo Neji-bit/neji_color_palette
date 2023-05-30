@@ -24195,11 +24195,6 @@
     return !_Hotreload.timerIds.length;
   };
   Hotreload.hotreload = (target_path) => {
-    fetch(target_path, { method: "HEAD" }).then((res) => {
-      if (!res.ok) {
-        location.reload();
-      }
-    });
   };
   init = () => {
     document.documentElement.style.setProperty("--js--height", `${window.innerHeight}px`);
