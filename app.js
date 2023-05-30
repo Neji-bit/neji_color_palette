@@ -24184,13 +24184,6 @@
     _Hotreload.timerIds = [];
   };
   Hotreload.enable = () => {
-    if (!_Hotreload.status())
-      return;
-    _Hotreload.filepath.forEach((p) => {
-      _Hotreload.timerIds.push(setInterval(() => {
-        _Hotreload.hotreload(p);
-      }, 500));
-    });
   };
   Hotreload.disable = () => {
     _Hotreload.timerIds.forEach((i) => {
